@@ -33,5 +33,5 @@ def requestPaymentsList():
         
 while True:
     requestPaymentsList()
-    time.sleep(60)
+    #time.sleep(60)
     
