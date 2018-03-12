@@ -6,10 +6,18 @@ razorpay_key_secret=os.environ['razorpay_key_secret']
 client = razorpay.Client(auth=(razorpay_key_id, razorpay_key_secret))
 
 payment_amount = 1250000
-resp = client.payment.fetch_all()
+
 #print(resp)
 items=resp["items"]
-while True:
+
+def CapturePayment(paymentID):
+    resp = classmethodient.payment.capture(paymentID, payment_amount)
+    print("captured")
+    print(resp)
+    
+def requestPaymentsList():
+    resp = client.payment.fetch_all()
+    items=resp["items"]
     for payment in items:
         print(payment)
         #print("----------------------------------")
@@ -22,6 +30,11 @@ while True:
         #print(status=="success")
         #if(not isCaptured and status!="failed"):        
         #    print(payment_id)
-        #    resp = classmethodient.payment.capture(payment_id, payment_amount)
+        #    
         print("Here")
+
+        
+while True:
+    requestPaymentsList()
     time.sleep(60)
+    
