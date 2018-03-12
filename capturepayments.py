@@ -16,7 +16,7 @@ while True:
         payment_id=payment["id"]
         status=payment["status"]
         print(payment_id)
-        print(str(isCaptured))
+        #print(str(isCaptured))
         print(status)
         #print(status=="success")
         #if(not isCaptured and status!="failed"):        
