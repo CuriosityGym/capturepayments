@@ -7,7 +7,7 @@ client = razorpay.Client(auth=(razorpay_key_id, razorpay_key_secret))
 
 payment_amount = 1250000
 resp = client.payment.fetch_all()
-
+print(resp)
 while True:
     for payment in resp["items"]:
         #print(payment)
