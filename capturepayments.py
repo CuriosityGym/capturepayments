@@ -32,6 +32,6 @@ def requestPaymentsList():
 
 
 requestPaymentsList()
-exit(0)
+
     #time.sleep(60)
     
