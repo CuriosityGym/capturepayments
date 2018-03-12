@@ -30,8 +30,8 @@ def requestPaymentsList():
            
         print("Here")
 
-        
-while True:
-    requestPaymentsList()
+
+requestPaymentsList()
+exit()
     #time.sleep(60)
     
