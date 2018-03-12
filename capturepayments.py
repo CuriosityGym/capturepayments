@@ -17,8 +17,8 @@ while True:
         status=payment["status"]
         print(payment_id + " " +str(isCaptured) + " "+ status)
         #print(status=="success")
-        if(not isCaptured and status!="failed"):        
-            print(payment_id)
-            resp = classmethodient.payment.capture(payment_id, payment_amount)
+        #if(not isCaptured and status!="failed"):        
+        #    print(payment_id)
+        #    resp = classmethodient.payment.capture(payment_id, payment_amount)
         
     time.sleep(60)
