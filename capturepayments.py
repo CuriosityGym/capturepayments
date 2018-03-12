@@ -9,7 +9,7 @@ payment_amount = 1250000
 
 def CapturePayment(paymentID):
     resp = classmethodient.payment.capture(paymentID, payment_amount)
-    print("captured")
+    print("Captured")
     print(resp)
     
 def requestPaymentsList():
@@ -25,9 +25,9 @@ def requestPaymentsList():
         #print(str(isCaptured))
         print(status)
         #print(status=="success")
-        #if(not isCaptured and status!="failed"):        
-        #    print(payment_id)
-        #    
+        if(not isCaptured and status=="authorized"):        
+            CapturePayment(payment_id)
+           
         print("Here")
 
         
