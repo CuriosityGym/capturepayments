@@ -7,9 +7,6 @@ client = razorpay.Client(auth=(razorpay_key_id, razorpay_key_secret))
 
 payment_amount = 1250000
 
-#print(resp)
-items=resp["items"]
-
 def CapturePayment(paymentID):
     resp = classmethodient.payment.capture(paymentID, payment_amount)
     print("captured")
